@@ -1,41 +1,44 @@
-<<<<<<< HEAD
 # Merlynn-choice
 A Next.js app that fetches models from the TOM API, lets users input data, gets predictions, stores results, and supports batch processing.
-=======
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Fetch drink models from TOM API**: The app pulls metadata for different drink models from the TOM API and presents it to the user.
+- **Dynamic Form**: Users can input data into dynamically generated forms based on the drink model's attributes.
+- **Fetch Decisions**: Based on the user's input, a decision is fetched from the TOM API, and the result is displayed.
+- **Store Decisions**: The app stores user decisions along with the input data in a MongoDB database using Mongoose.
+- **User Experience**: The app is styled with **TailwindCSS** to ensure a responsive and modern UI.
+- **Model Selection**: Users can select any model from the TOM API to fetch and input data.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Technologies Used
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- **Next.js**: A React framework for server-side rendering and static site generation.
+- **React.js**: A JavaScript library for building user interfaces.
+- **TailwindCSS**: A CSS framework for rapid UI development.
+- **MongoDB**: A NoSQL database to store user inputs and decisions.
+- **Mongoose**: A MongoDB object modeling tool for Node.js.
+- **Axios**: Promise-based HTTP client for the browser and Node.js to interact with external APIs.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Setup and Running the App
 
-## Learn More
+### Prerequisites
 
-To learn more about Next.js, take a look at the following resources:
+- **Node.js**: Make sure Node.js is installed. If not, you can download it from [here](https://nodejs.org/).
+- **MongoDB**: You will need a MongoDB database. You can either use a local instance or sign up for [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) to create a cloud database.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Installation
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. **Clone the repository**:
 
-## Deploy on Vercel
+   ```bash
+ - git clone https://github.com/LisetteMukeba/Merlynn-choice.git
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- npm install
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
->>>>>>> 103c8de (Initial commit from Create Next App)
+- MONGODB_URI=mongodb+srv://merlynndbuser:merlynn@merlynndb.wqpys.mongodb.net/
+- TOM_API_KEY=9307bfd5fa011428ff198bb37547f979
+- npm run dev
+- Open your browser and go to http://localhost:3000 to see the app in action.
+
