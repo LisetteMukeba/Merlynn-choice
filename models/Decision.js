@@ -1,10 +1,22 @@
+// models/Decision.js
+import mongoose from 'mongoose';
 
-import mongoose from "mongoose";
-
-const DrinkChoiceSchema = new mongoose.Schema({
-  inputs: Object,
-  createdAt: { type: Date, default: Date.now },
+const DecisionSchema = new mongoose.Schema({
+  input: {
+    type: Map,
+    of: String,
+    required: true
+  },
+  decision: {
+    type: String,
+    required: true
+  },
+  createdAt: {
+    type: Date,
+    default: Date.now
+  }
 });
 
-export default mongoose.models.DrinkChoice ||
-  mongoose.model("DrinkChoice", DrinkChoiceSchema);
+const Decision = mongoose.models.Decision || mongoose.model('Decision', DecisionSchema);
+
+export default Decision;
